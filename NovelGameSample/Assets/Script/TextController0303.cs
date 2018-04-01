@@ -164,7 +164,10 @@ public class TextController0303 : MonoBehaviour
                             }
                             else
                             {
-                                Actor[number].transform.position = new Vector3(0f, -1.4f, 0f);
+                                for (float x = -4.8f; x >= -10f; x -= 0.01f)
+                                {
+                                    Actor[number].transform.position = new Vector3(-20f, -1.4f, 0f);
+                                }
                             }
 
                             break;
@@ -172,14 +175,17 @@ public class TextController0303 : MonoBehaviour
                             if (Actor[number] == ActorList[0])
                             {
                                 //20180307Update関数は1フレームでの処理なので、1周の間にforをかましてもアニメーションにはならない
-                                for (float x = -20f; x <= -4.8f; x += 0.01f)
+                                for (float x = -10f; x <= -4.8f; x += 0.01f)
                                 {
                                     Actor[number].transform.position = new Vector3(x, -1.4f, 0f);
                                 }
                             }
                             else
                             {
-                                Actor[number].transform.position = new Vector3(0f, -1.4f, 0f);
+                                for (float x = -10f; x <= -4.8f; x += 0.01f)
+                                {
+                                    Actor[number].transform.position = new Vector3(x, -1.4f, 0f);
+                                }
                             }
                             break;
                         default:
@@ -193,14 +199,17 @@ public class TextController0303 : MonoBehaviour
                         case (false):
                             if (Actor[number] == ActorList[0])
                             {
-                                for (float x = 4.8f; x >= 20f; x += 0.01f)
+                                for (float x = 4.8f; x <= 20f; x += 0.01f)
                                 {
-                                    Actor[number].transform.position = new Vector3(20f, 0f, 0f);
+                                    Actor[number].transform.position = new Vector3(20f, -1.4f, 0f);
                                 }
                             }
                             else
                             {
-                                Actor[number].transform.position = new Vector3(0f, 0f, 0f);
+                                for (float x = 4.8f; x <= 20f; x += 0.01f)
+                                {
+                                    Actor[number].transform.position = new Vector3(20f, -1.4f, 0f);
+                                }
                             }
 
                             break;
@@ -208,14 +217,17 @@ public class TextController0303 : MonoBehaviour
                             if (Actor[number] == ActorList[0])
                             {
                                 //20180307Update関数は1フレームでの処理なので、1周の間にforをかましてもアニメーションにはならない
-                                for (float x = 20f; x <= 4.8f; x -= 0.01f)
+                                for (float x = 20f; x >= 4.8f; x -= 0.01f)
                                 {
-                                    Actor[number].transform.position = new Vector3(x, 0f, 0f);
+                                    Actor[number].transform.position = new Vector3(x, -1.4f, 0f);
                                 }
                             }
                             else
                             {
-                                Actor[number].transform.position = new Vector3(0f, 0f, 0f);
+                                for (float x = 20f; x >= 4.8f; x -= 0.01f)
+                                {
+                                    Actor[number].transform.position = new Vector3(x, -1.4f, 0f);
+                                }
                             }
                             break;
                         default:
